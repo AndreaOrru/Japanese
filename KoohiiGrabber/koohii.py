@@ -39,6 +39,6 @@ for line in rtk:
         stories.append('')
 
     f.write('{}\t{}\t{}\t{}\n'.format(number, kanji, keyword, '\t'.join(stories)))
-    sleep(1)
+    sleep(2)
 
 f.close()
