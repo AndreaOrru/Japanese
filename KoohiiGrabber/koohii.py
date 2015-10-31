@@ -1,4 +1,5 @@
 #!/usr/bin/env python
+import getpass
 
 USERNAME = ''
 PASSWORD = ''
@@ -6,7 +7,7 @@ PASSWORD = ''
 if(USERNAME == '')
     USERNAME = raw_input("Enter Koohii username")
 if(PASSWORD == '')
-    PASSWORD = raw_input("Enter Koohii password")
+    PASSWORD = getpass.getpass("Enter Koohii password")
 
 
 INPUT  = 'rtk.tsv'     # https://docs.google.com/spreadsheet/ccc?key=0AqYInAMvWw-2dGdzUV9uUXpaLXNhYy1Qb3Z0NVRidnc#gid=0
