@@ -3,6 +3,12 @@
 USERNAME = ''
 PASSWORD = ''
 
+if(USERNAME == '')
+    USERNAME = raw_input("Enter Koohii username")
+if(PASSWORD == '')
+    PASSWORD = raw_input("Enter Koohii password")
+
+
 INPUT  = 'rtk.tsv'     # https://docs.google.com/spreadsheet/ccc?key=0AqYInAMvWw-2dGdzUV9uUXpaLXNhYy1Qb3Z0NVRidnc#gid=0
 OUTPUT = 'stories.txt'
 
@@ -21,7 +27,6 @@ br.submit()
 
 f   = open(OUTPUT, 'w')
 rtk = open(INPUT , 'r').readlines()
-
 for line in rtk:
     line = line.split('\t')
     kanji   = line[1]

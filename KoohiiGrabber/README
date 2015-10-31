@@ -1,0 +1,8 @@
+To install the required module, mechanize, you can get it here:
+https://pypi.python.org/pypi/mechanize/
+
+After downloading follow the instructions in the zip provided.
+
+
+After Mechanize has been downloaded, run the python file using your version of python.
+The username and password can be specified in the file. If ran without editing these, the script will prompt you for one. 
