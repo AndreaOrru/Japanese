@@ -1,4 +1,0 @@
-This script requires mechanize:
-https://pypi.python.org/pypi/mechanize/
-
-Username and password can be entered at runtime or specified in the script. 
