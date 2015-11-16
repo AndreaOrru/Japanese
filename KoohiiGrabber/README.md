@@ -1,6 +1,6 @@
 Quick and dirty script to extract the top stories for each RTK kanji from http://kanji.koohii.com.
 
-Mechanize is required:
-https://pypi.python.org/pypi/mechanize/
+Based on the content of this spreadsheet by Katsuo:
+https://docs.google.com/spreadsheets/d/1Z0BUSie8wh0JqlUejezs3EqauJuF-zKEomOQnqm9J08
 
-Username and password can be entered at runtime or specified in the script.
+Python 3 and MechanicalSoup are required.
