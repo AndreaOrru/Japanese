@@ -10,8 +10,8 @@ from time import sleep
 if __name__ == '__main__':
     parser = argparse.ArgumentParser('koohii', description='Grab the best stories from Kanji Koohii.')
     required = parser.add_argument_group('required arguments')
-    required.add_argument('-i', metavar='INPUT',    required=True, help='TSV file containing the kanji info')
-    required.add_argument('-o', metavar='OUTPUT',   required=True, help='TSV file where to export the stories')
+    required.add_argument('-i', metavar='INPUT',  required=True, help='TSV file containing the kanji info')
+    required.add_argument('-o', metavar='OUTPUT', required=True, help='TSV file where to export the stories')
 
     parser.add_argument('-n', metavar='STORIES', default=5, type=int, help='number of stories per kanji (default 5)')
     args = parser.parse_args()
@@ -35,14 +35,6 @@ if __name__ == '__main__':
         kanji   = line[1]
         number  = line[3]
         keyword = line[6]
-
-        try:
-            kanji.encode('ascii')
-        except UnicodeEncodeError:
-            pass
-        else:
-            continue
-
         print('{:<4}  {}  {}'.format(number, kanji, keyword))
 
         page = browser.get('http://kanji.koohii.com/study/kanji/{}'.format(kanji))
