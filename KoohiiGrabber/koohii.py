@@ -42,7 +42,7 @@ for line in rtk:
     stories = [re.sub(r'<a href="/study/kanji/(.*?)">(.*?)</a>.*?</span>\)',
                       r'<a href="http://kanji.koohii.com/study/kanji/\1">\2</a>',
                       x) for x in stories]
-    stories = [re.sub(r'\n|\t', r' ', x) for f x in stories]
+    stories = [re.sub(r'\n|\t', r' ', x) for x in stories]
     stories = (stories + ['']*args.n)[:args.n]
 
     output.write('{}\t{}\t{}\t{}\n'.format(number, kanji, keyword, '\t'.join(stories)))
