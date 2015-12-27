@@ -45,7 +45,10 @@ for line in rtk:
     stories = [re.sub(r'\n|\t', r' ', x) for x in stories]
     stories = (stories + ['']*args.n)[:args.n]
 
-    output.write('{}\t{}\t{}\t{}\n'.format(number, kanji, keyword, '\t'.join(stories)))
+    outputline = '{}\t{}\t{}\t{}\n'.format(number, kanji, keyword, '\t'.join(stories))
+    if outputline.count('"') % 2:
+        outputline = outputline.replace('"', '', 1)
+    output.write(outputline)
     sleep(2)
 
 output.close()
