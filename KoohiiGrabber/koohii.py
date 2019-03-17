@@ -40,7 +40,7 @@ for line in rtk:
     stories = page.soup.select('#sharedstories-fav .story')[:args.n]
     stories = [''.join(map(str, x.contents)) for x in stories]
     stories = [re.sub(r'<a href="/study/kanji/(.*?)">(.*?)</a>.*?</span>\)',
-                      r'<a href="http://kanji.koohii.com/study/kanji/\1">\2</a>',
+                      r'<a href="https://kanji.koohii.com/study/kanji/\1">\2</a>',
                       x) for x in stories]
     stories = [re.sub(r'\n|\t', r' ', x) for x in stories]
     stories = (stories + ['']*args.n)[:args.n]
